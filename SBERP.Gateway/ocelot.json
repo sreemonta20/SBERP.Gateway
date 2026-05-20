@@ -3,7 +3,9 @@
     {
       "Key": "Auth_Login",
       "UpstreamPathTemplate": "/gateway/auth/authenticateUser",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/Auth/authenticateUser",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -16,7 +18,9 @@
     {
       "Key": "Auth_ProfileMenu",
       "UpstreamPathTemplate": "/gateway/auth/getAppUserProfileMenu",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Auth/getAppUserProfileMenu",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -28,19 +32,14 @@
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
-      },
-      "RateLimitOptions": {
-        "ClientWhitelist": [],
-        "EnableRateLimiting": true,
-        "Period": "1m",
-        "PeriodTimespan": 60,
-        "Limit": 60
       }
     },
     {
       "Key": "Auth_RefreshToken",
       "UpstreamPathTemplate": "/gateway/auth/refreshToken",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/Auth/refreshToken",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -53,7 +52,9 @@
     {
       "Key": "Auth_Revoke",
       "UpstreamPathTemplate": "/gateway/auth/revoke",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/Auth/revoke",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -66,7 +67,9 @@
     {
       "Key": "RoleMenu_GetAllRoles",
       "UpstreamPathTemplate": "/gateway/rolemenu/getAllAppUserRoles",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/getAllAppUserRoles",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -74,13 +77,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_GetAllRolesPagination",
       "UpstreamPathTemplate": "/gateway/rolemenu/getAllAppUserRolesPagination",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/getAllAppUserRolesPagination",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -88,13 +92,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_GetRoleById",
       "UpstreamPathTemplate": "/gateway/rolemenu/getAppUserRolesById",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/getAppUserRolesById",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -102,13 +107,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_CreateUpdateRole",
       "UpstreamPathTemplate": "/gateway/rolemenu/createUpdateAppUserRole",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/createUpdateAppUserRole",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -116,13 +122,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_DeleteRole",
       "UpstreamPathTemplate": "/gateway/rolemenu/deleteAppUserRole",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/deleteAppUserRole",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -130,13 +137,15 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_GetMenuPagingSearch",
       "UpstreamPathTemplate": "/gateway/rolemenu/getAllAppUserMenuPagingWithSearch",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/getAllAppUserMenuPagingWithSearch",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -144,13 +153,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_GetMenuByUserId",
       "UpstreamPathTemplate": "/gateway/rolemenu/getAllAppUserMenuByUserId",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/getAllAppUserMenuByUserId",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -158,13 +168,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_CreateUpdateMenu",
       "UpstreamPathTemplate": "/gateway/rolemenu/createUpdateAppUserMenu",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/createUpdateAppUserMenu",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -172,13 +183,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_DeleteMenu",
       "UpstreamPathTemplate": "/gateway/rolemenu/deleteAppUserMenu",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/deleteAppUserMenu",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -186,13 +198,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_GetAllParentMenus",
       "UpstreamPathTemplate": "/gateway/rolemenu/getAllParentMenus",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/getAllParentMenus",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -200,13 +213,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "RoleMenu_GetRoleMenuInitialData",
       "UpstreamPathTemplate": "/gateway/rolemenu/getAppUserRoleMenuInitialData",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/RoleMenu/getAppUserRoleMenuInitialData",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -214,27 +228,44 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
-      "Key": "RoleMenu_GetRoleMenusPagingSearch",
-      "UpstreamPathTemplate": "/gateway/rolemenu/getAllAppUserRoleMenusPagingWithSearch",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
-      "DownstreamPathTemplate": "/api/v1/RoleMenu/getAllAppUserRoleMenusPagingWithSearch",
+      "Key": "RoleMenu_SaveUpdateRoleMenuBulk",
+      "UpstreamPathTemplate": "/gateway/rolemenu/saveUpdateRoleMenuBulk",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RoleMenu/saveUpdateRoleMenuBulk",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
-      "Key": "User_CreateUpdate",
+      "Key": "RoleMenu_GetRoleMenus",
+      "UpstreamPathTemplate": "/gateway/rolemenu/getRoleMenusPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RoleMenu/getRoleMenusPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ]
+    },
+    {
+      "Key": "User_CreateUpdateUser",
       "UpstreamPathTemplate": "/gateway/user/createUpdateAppUser",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/User/createUpdateAppUser",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -242,13 +273,91 @@
           "Host": "localhost",
           "Port": 44357
         }
+      ]
+    },
+    {
+      "Key": "User_GetUserProfilePagingSearch",
+      "UpstreamPathTemplate": "/gateway/user/getAllAppUserProfilePagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
       ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      "DownstreamPathTemplate": "/api/v1/User/getAllAppUserProfilePagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ]
+    },
+    {
+      "Key": "User_GetUserProfileByd",
+      "UpstreamPathTemplate": "/gateway/user/getAppUserProfileById",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/User/getAppUserProfileById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ]
+    },
+    {
+      "Key": "User_CreateUpdateUserProfile",
+      "UpstreamPathTemplate": "/gateway/user/createUpdateAppUserProfile",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/User/createUpdateAppUserProfile",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ]
+    },
+    {
+      "Key": "User_DeleteUserProfile",
+      "UpstreamPathTemplate": "/gateway/user/deleteAppUserProfile",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/User/deleteAppUserProfile",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ]
+    },
+    {
+      "Key": "RoleMenu_GetRoleMenusPagingSearch",
+      "UpstreamPathTemplate": "/gateway/rolemenu/getAllAppUserRoleMenusPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/RoleMenu/getAllAppUserRoleMenusPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ]
     },
     {
       "Key": "User_GetUserMenuInitialData",
       "UpstreamPathTemplate": "/gateway/user/getUserMenuInitialData",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/User/getUserMenuInitialData",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -256,13 +365,15 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "User_GetAllPagingSearch",
       "UpstreamPathTemplate": "/gateway/user/getAllAppUserPagingWithSearch",
-      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/User/getAllAppUserPagingWithSearch",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -270,13 +381,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "User_GetById",
       "UpstreamPathTemplate": "/gateway/user/getAppUserById",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/User/getAppUserById",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -284,13 +396,14 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "User_Delete",
       "UpstreamPathTemplate": "/gateway/user/deleteAppUser",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/v1/User/deleteAppUser",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -298,34 +411,44 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
-      "Key": "HR_GetAllEmployees",
-      "UpstreamPathTemplate": "/gateway/hr/employee/getAllEmployees",
-      "UpstreamHttpMethod": [ "GET" ],
-      "DownstreamPathTemplate": "/api/v1/Employee/getAllEmployees",
+      "Key": "HR_GetEmployeeInitialData",
+      "UpstreamPathTemplate": "/gateway/hr/employee/getEmployeeInitialData",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Employee/getEmployeeInitialData",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 44358
         }
+      ]
+    },
+    {
+      "Key": "HR_GetAllEmployeesPaging",
+      "UpstreamPathTemplate": "/gateway/hr/employee/getAllEmployeesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
       ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" },
-      "RateLimitOptions": {
-        "ClientWhitelist": [],
-        "EnableRateLimiting": true,
-        "Period": "1m",
-        "PeriodTimespan": 60,
-        "Limit": 100
-      }
+      "DownstreamPathTemplate": "/api/v1/Employee/getAllEmployeesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
     },
     {
       "Key": "HR_GetEmployeeById",
       "UpstreamPathTemplate": "/gateway/hr/employee/getEmployeeById/{id}",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Employee/getEmployeeById/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -333,13 +456,14 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "HR_CreateEmployee",
       "UpstreamPathTemplate": "/gateway/hr/employee/createEmployee",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/Employee/createEmployee",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -347,13 +471,14 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "HR_UpdateEmployee",
       "UpstreamPathTemplate": "/gateway/hr/employee/updateEmployee",
-      "UpstreamHttpMethod": [ "PUT" ],
+      "UpstreamHttpMethod": [
+        "PUT"
+      ],
       "DownstreamPathTemplate": "/api/v1/Employee/updateEmployee",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -361,13 +486,14 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "HR_DeleteEmployee",
       "UpstreamPathTemplate": "/gateway/hr/employee/deleteEmployee/{id}",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/v1/Employee/deleteEmployee/{id}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -375,13 +501,14 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      ]
     },
     {
       "Key": "HR_GetAllDepartments",
       "UpstreamPathTemplate": "/gateway/hr/department/getAllDepartments",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Department/getAllDepartments",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -389,17 +516,175 @@
           "Host": "localhost",
           "Port": 44358
         }
+      ]
+    },
+    {
+      "Key": "HR_GetAllDepartmentsPaging",
+      "UpstreamPathTemplate": "/gateway/hr/department/getAllDepartmentsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
       ],
-      "AuthenticationOptions": { "AuthenticationProviderKey": "Bearer" }
+      "DownstreamPathTemplate": "/api/v1/Department/getAllDepartmentsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetDepartmentById",
+      "UpstreamPathTemplate": "/gateway/hr/department/getDepartmentById/{id}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Department/getDepartmentById/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_CreateUpdateDepartment",
+      "UpstreamPathTemplate": "/gateway/hr/department/createUpdateDepartment",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Department/createUpdateDepartment",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_DeleteDepartment",
+      "UpstreamPathTemplate": "/gateway/hr/department/deleteDepartment/{id}",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Department/deleteDepartment/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetAllDesignations",
+      "UpstreamPathTemplate": "/gateway/hr/designation/getAllDesignations",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Designation/getAllDesignations",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetAllDesignationsPaging",
+      "UpstreamPathTemplate": "/gateway/hr/designation/getAllDesignationsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Designation/getAllDesignationsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_CreateUpdateDesignation",
+      "UpstreamPathTemplate": "/gateway/hr/designation/createUpdateDesignation",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Designation/createUpdateDesignation",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_DeleteDesignation",
+      "UpstreamPathTemplate": "/gateway/hr/designation/deleteDesignation/{id}",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Designation/deleteDesignation/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetSettings",
+      "UpstreamPathTemplate": "/gateway/hr/settings/getHRSettings",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HRSettings/getHRSettings",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_SaveSettings",
+      "UpstreamPathTemplate": "/gateway/hr/settings/saveUpdateHRSettings",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HRSettings/saveUpdateHRSettings",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_UploadAttendance",
+      "UpstreamPathTemplate": "/gateway/hr/settings/uploadAttendanceExcel",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HRSettings/uploadAttendanceExcel",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "https://localhost:5200",
-    "RateLimitOptions": {
-      "DisableRateLimitHeaders": false,
-      "QuotaExceededMessage": "Too many requests. Please try again later.",
-      "HttpStatusCode": 429,
-      "ClientIdHeader": "ClientId"
-    }
+    "BaseUrl": "https://localhost:5200"
   }
 }

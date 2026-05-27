@@ -445,11 +445,11 @@
     },
     {
       "Key": "HR_GetEmployeeById",
-      "UpstreamPathTemplate": "/gateway/hr/employee/getEmployeeById/{id}",
+      "UpstreamPathTemplate": "/gateway/hr/employee/getEmployeeById",
       "UpstreamHttpMethod": [
         "GET"
       ],
-      "DownstreamPathTemplate": "/api/v1/Employee/getEmployeeById/{id}",
+      "DownstreamPathTemplate": "/api/v1/Employee/getEmployeeById",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -490,11 +490,11 @@
     },
     {
       "Key": "HR_DeleteEmployee",
-      "UpstreamPathTemplate": "/gateway/hr/employee/deleteEmployee/{id}",
+      "UpstreamPathTemplate": "/gateway/hr/employee/deleteEmployee",
       "UpstreamHttpMethod": [
         "DELETE"
       ],
-      "DownstreamPathTemplate": "/api/v1/Employee/deleteEmployee/{id}",
+      "DownstreamPathTemplate": "/api/v1/Employee/deleteEmployee",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {

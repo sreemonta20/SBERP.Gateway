@@ -535,11 +535,11 @@
     },
     {
       "Key": "HR_GetDepartmentById",
-      "UpstreamPathTemplate": "/gateway/hr/department/getDepartmentById/{id}",
+      "UpstreamPathTemplate": "/gateway/hr/department/getDepartmentById",
       "UpstreamHttpMethod": [
         "GET"
       ],
-      "DownstreamPathTemplate": "/api/v1/Department/getDepartmentById/{id}",
+      "DownstreamPathTemplate": "/api/v1/Department/getDepartmentById",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -565,11 +565,11 @@
     },
     {
       "Key": "HR_DeleteDepartment",
-      "UpstreamPathTemplate": "/gateway/hr/department/deleteDepartment/{id}",
+      "UpstreamPathTemplate": "/gateway/hr/department/deleteDepartment",
       "UpstreamHttpMethod": [
         "DELETE"
       ],
-      "DownstreamPathTemplate": "/api/v1/Department/deleteDepartment/{id}",
+      "DownstreamPathTemplate": "/api/v1/Department/deleteDepartment",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -625,11 +625,11 @@
     },
     {
       "Key": "HR_DeleteDesignation",
-      "UpstreamPathTemplate": "/gateway/hr/designation/deleteDesignation/{id}",
+      "UpstreamPathTemplate": "/gateway/hr/designation/deleteDesignation",
       "UpstreamHttpMethod": [
         "DELETE"
       ],
-      "DownstreamPathTemplate": "/api/v1/Designation/deleteDesignation/{id}",
+      "DownstreamPathTemplate": "/api/v1/Designation/deleteDesignation",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {

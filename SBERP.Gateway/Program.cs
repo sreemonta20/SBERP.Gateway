@@ -1,3 +1,4 @@
+using Azure.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Ocelot.DependencyInjection;
@@ -17,6 +18,21 @@ builder.Configuration
     .AddJsonFile($"ocelot.{builder.Environment.EnvironmentName}.json",
                  optional: true, reloadOnChange: true)
     .AddEnvironmentVariables();
+
+// 1.1 Azure Key Vault — added LAST so its secrets override appsettings.json.
+//     Mirrors the SBERP.Security / SBERP.HumanResources setup. The provider maps
+//     "--" in secret names to ":", so the secret "JwtSettings--Key" lands at
+//     configuration["JwtSettings:Key"]. Gated by the same IsConnectionStrInAzureVault
+//     flag for consistency (rename later if you prefer a JWT-specific flag).
+bool useVault = bool.Parse(builder.Configuration["IsConnectionStrInAzureVault"] ?? "false");
+var keyVaultUri = builder.Configuration["KeyVaultUri"];
+
+if (useVault && !string.IsNullOrWhiteSpace(keyVaultUri))
+{
+    builder.Configuration.AddAzureKeyVault(
+        new Uri(keyVaultUri),
+        new DefaultAzureCredential());
+}
 
 // 2. Serilog
 Log.Logger = new LoggerConfiguration()
@@ -42,14 +58,17 @@ builder.Services.AddCors(options =>
                                 "X-RateLimit-Reset")));
 
 // 4. JWT Bearer — Layer 1 validation before Ocelot forwards
-// Key/Issuer/Audience MUST match SBERP.Security AppSettings:JWT exactly
+// Key/Issuer/Audience MUST match SBERP.Security AppSettings:JWT exactly.
+// JwtSettings:Key now comes from Key Vault (secret "JwtSettings--Key"); the file
+// value is the offline fallback.
 var jwtKey = builder.Configuration["JwtSettings:Key"];
 var jwtIssuer = builder.Configuration["JwtSettings:Issuer"];
 var jwtAudience = builder.Configuration["JwtSettings:Audience"];
 
 if (string.IsNullOrWhiteSpace(jwtKey))
     throw new InvalidOperationException(
-        "JwtSettings:Key is missing in SBERP.Gateway appsettings.json");
+        "JwtSettings:Key is missing. Set the Key Vault secret 'JwtSettings--Key' " +
+        "or the JwtSettings:Key fallback in SBERP.Gateway appsettings.json.");
 
 builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

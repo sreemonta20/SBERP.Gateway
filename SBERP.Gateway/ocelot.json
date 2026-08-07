@@ -414,6 +414,149 @@
       ]
     },
     {
+      "Key": "HR_GetAllCompanies",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/getAllCompanies",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/Company/getAllCompanies",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetAllCompaniesPaging",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/getAllCompaniesPagingWithSearch",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/Company/getAllCompaniesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetCompanyById",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/getCompanyById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/Company/getCompanyById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_SaveUpdateCompany",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/saveUpdateCompany",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/v1/Company/saveUpdateCompany",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_DeleteCompany",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/deleteCompany",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/Company/deleteCompany",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetAllBranches",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/getAllBranches",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/Branch/getAllBranches",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetAllBranchesByCompanyId",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/getAllBranchesByCompanyId",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/Branch/getAllBranchesByCompanyId",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetAllBranchesPaging",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/getAllBranchesPagingWithSearch",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/Branch/getAllBranchesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_GetBranchById",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/getBranchById",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/v1/Branch/getBranchById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_SaveUpdateBranch",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/saveUpdateBranch",
+      "UpstreamHttpMethod": [ "POST" ],
+      "DownstreamPathTemplate": "/api/v1/Branch/saveUpdateBranch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
+      "Key": "HR_DeleteBranch",
+      "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/deleteBranch",
+      "UpstreamHttpMethod": [ "DELETE" ],
+      "DownstreamPathTemplate": "/api/v1/Branch/deleteBranch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ]
+    },
+    {
       "Key": "HR_GetEmployeeInitialData",
       "UpstreamPathTemplate": "/gateway/hr/employee/getEmployeeInitialData",
       "UpstreamHttpMethod": [

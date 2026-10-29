@@ -13,7 +13,10 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
     },
     {
       "Key": "Auth_ProfileMenu",
@@ -47,7 +50,10 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
     },
     {
       "Key": "Auth_Revoke",
@@ -62,7 +68,10 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
     },
     {
       "Key": "RoleMenu_GetAllRoles",
@@ -77,7 +86,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_GetAllRolesPagination",
@@ -92,7 +105,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_GetRoleById",
@@ -107,7 +124,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_CreateUpdateRole",
@@ -122,7 +143,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_DeleteRole",
@@ -137,7 +162,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_GetMenuPagingSearch",
@@ -153,7 +182,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_GetMenuByUserId",
@@ -168,7 +201,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_CreateUpdateMenu",
@@ -183,7 +220,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_DeleteMenu",
@@ -198,7 +239,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_GetAllParentMenus",
@@ -213,7 +258,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_GetRoleMenuInitialData",
@@ -228,7 +277,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_SaveUpdateRoleMenuBulk",
@@ -243,7 +296,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_GetRoleMenus",
@@ -258,7 +315,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "User_CreateUpdateUser",
@@ -273,7 +334,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "User_GetUserProfilePagingSearch",
@@ -289,7 +354,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "User_GetUserProfileByd",
@@ -304,7 +373,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "User_CreateUpdateUserProfile",
@@ -319,7 +392,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "User_DeleteUserProfile",
@@ -334,7 +411,68 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "User_UploadUserProfilePhoto",
+      "UpstreamPathTemplate": "/gateway/user/uploadAppUserProfilePhoto",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/User/uploadAppUserProfilePhoto",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "User_GetUserProfilePhoto",
+      "UpstreamPathTemplate": "/gateway/user/getAppUserProfilePhoto",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/User/getAppUserProfilePhoto",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "User_RemoveUserProfilePhoto",
+      "UpstreamPathTemplate": "/gateway/user/removeAppUserProfilePhoto",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/User/removeAppUserProfilePhoto",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44357
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "RoleMenu_GetRoleMenusPagingSearch",
@@ -350,7 +488,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "User_GetUserMenuInitialData",
@@ -365,7 +507,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "User_GetAllPagingSearch",
@@ -381,7 +527,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "User_GetById",
@@ -396,7 +546,11 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "User_Delete",
@@ -411,12 +565,18 @@
           "Host": "localhost",
           "Port": 44357
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllCompanies",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/getAllCompanies",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Company/getAllCompanies",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -424,12 +584,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllCompaniesPaging",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/getAllCompaniesPagingWithSearch",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Company/getAllCompaniesPagingWithSearch",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -437,12 +603,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetCompanyById",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/getCompanyById",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Company/getCompanyById",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -450,12 +622,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_SaveUpdateCompany",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/saveUpdateCompany",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/Company/saveUpdateCompany",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -463,12 +641,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_DeleteCompany",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/company/deleteCompany",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/v1/Company/deleteCompany",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -476,12 +660,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllBranches",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/getAllBranches",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Branch/getAllBranches",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -489,12 +679,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllBranchesByCompanyId",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/getAllBranchesByCompanyId",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Branch/getAllBranchesByCompanyId",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -502,12 +698,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllBranchesPaging",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/getAllBranchesPagingWithSearch",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Branch/getAllBranchesPagingWithSearch",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -515,12 +717,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetBranchById",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/getBranchById",
-      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
       "DownstreamPathTemplate": "/api/v1/Branch/getBranchById",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -528,12 +736,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_SaveUpdateBranch",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/saveUpdateBranch",
-      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
       "DownstreamPathTemplate": "/api/v1/Branch/saveUpdateBranch",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -541,12 +755,18 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_DeleteBranch",
       "UpstreamPathTemplate": "/gateway/hr/organizationsetup/branch/deleteBranch",
-      "UpstreamHttpMethod": [ "DELETE" ],
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
       "DownstreamPathTemplate": "/api/v1/Branch/deleteBranch",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
@@ -554,7 +774,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetEmployeeInitialData",
@@ -569,7 +793,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllEmployeesPaging",
@@ -584,7 +812,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetEmployeeById",
@@ -599,7 +831,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_CreateEmployee",
@@ -614,7 +850,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_UpdateEmployee",
@@ -629,7 +869,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_DeleteEmployee",
@@ -644,7 +888,87 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_UploadEmployeePhoto",
+      "UpstreamPathTemplate": "/gateway/hr/employee/uploadEmployeePhoto",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Employee/uploadEmployeePhoto",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_GetEmployeePhoto",
+      "UpstreamPathTemplate": "/gateway/hr/employee/getEmployeePhoto",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Employee/getEmployeePhoto",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_RemoveEmployeePhoto",
+      "UpstreamPathTemplate": "/gateway/hr/employee/removeEmployeePhoto",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Employee/removeEmployeePhoto",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_GetMyEmployeeBrief",
+      "UpstreamPathTemplate": "/gateway/hr/employee/getMyEmployeeBrief",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Employee/getMyEmployeeBrief",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllDepartments",
@@ -659,7 +983,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllDepartmentsPaging",
@@ -674,7 +1002,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetDepartmentById",
@@ -689,7 +1021,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_CreateUpdateDepartment",
@@ -704,7 +1040,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_DeleteDepartment",
@@ -719,7 +1059,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllDesignations",
@@ -734,7 +1078,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetAllDesignationsPaging",
@@ -749,7 +1097,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_CreateUpdateDesignation",
@@ -764,7 +1116,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_DeleteDesignation",
@@ -779,7 +1135,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_GetSettings",
@@ -794,7 +1154,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_SaveSettings",
@@ -809,7 +1173,11 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     },
     {
       "Key": "HR_UploadAttendance",
@@ -824,7 +1192,2685 @@
           "Host": "localhost",
           "Port": 44358
         }
-      ]
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AppraisalCycle_createUpdateAppraisalCycle",
+      "UpstreamPathTemplate": "/gateway/hr/appraisalcycle/createUpdateAppraisalCycle",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AppraisalCycle/createUpdateAppraisalCycle",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AppraisalCycle_deleteAppraisalCycle",
+      "UpstreamPathTemplate": "/gateway/hr/appraisalcycle/deleteAppraisalCycle",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AppraisalCycle/deleteAppraisalCycle",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AppraisalCycle_getAllAppraisalCyclesPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/appraisalcycle/getAllAppraisalCyclesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AppraisalCycle/getAllAppraisalCyclesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AppraisalCycle_getAppraisalCyclesLookup",
+      "UpstreamPathTemplate": "/gateway/hr/appraisalcycle/getAppraisalCyclesLookup",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AppraisalCycle/getAppraisalCyclesLookup",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AppraisalCycle_initiateReviews",
+      "UpstreamPathTemplate": "/gateway/hr/appraisalcycle/initiateReviews",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AppraisalCycle/initiateReviews",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AppraisalCycle_setAppraisalCycleStatus",
+      "UpstreamPathTemplate": "/gateway/hr/appraisalcycle/setAppraisalCycleStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AppraisalCycle/setAppraisalCycleStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendanceSummary_getMonthlyAttendanceSummary",
+      "UpstreamPathTemplate": "/gateway/hr/attendancesummary/getMonthlyAttendanceSummary",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendanceSummary/getMonthlyAttendanceSummary",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Candidate_applyToPosting",
+      "UpstreamPathTemplate": "/gateway/hr/candidate/applyToPosting",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Candidate/applyToPosting",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Candidate_getAllCandidatesPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/candidate/getAllCandidatesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Candidate/getAllCandidatesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Candidate_moveApplicationStage",
+      "UpstreamPathTemplate": "/gateway/hr/candidate/moveApplicationStage",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Candidate/moveApplicationStage",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Competency_createUpdateCompetency",
+      "UpstreamPathTemplate": "/gateway/hr/competency/createUpdateCompetency",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Competency/createUpdateCompetency",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Competency_deleteCompetency",
+      "UpstreamPathTemplate": "/gateway/hr/competency/deleteCompetency",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Competency/deleteCompetency",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Competency_getAllCompetenciesPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/competency/getAllCompetenciesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Competency/getAllCompetenciesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Competency_getCompetenciesLookup",
+      "UpstreamPathTemplate": "/gateway/hr/competency/getCompetenciesLookup",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Competency/getCompetenciesLookup",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_CostCenter_createUpdateCostCenter",
+      "UpstreamPathTemplate": "/gateway/hr/costcenter/createUpdateCostCenter",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CostCenter/createUpdateCostCenter",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_CostCenter_deleteCostCenter",
+      "UpstreamPathTemplate": "/gateway/hr/costcenter/deleteCostCenter",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CostCenter/deleteCostCenter",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_CostCenter_getAllCostCenters",
+      "UpstreamPathTemplate": "/gateway/hr/costcenter/getAllCostCenters",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CostCenter/getAllCostCenters",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_CostCenter_getAllCostCentersPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/costcenter/getAllCostCentersPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/CostCenter/getAllCostCentersPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Goal_createUpdateGoal",
+      "UpstreamPathTemplate": "/gateway/hr/goal/createUpdateGoal",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Goal/createUpdateGoal",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Goal_deleteGoal",
+      "UpstreamPathTemplate": "/gateway/hr/goal/deleteGoal",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Goal/deleteGoal",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Goal_getAllGoalsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/goal/getAllGoalsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Goal/getAllGoalsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Goal_updateGoalProgress",
+      "UpstreamPathTemplate": "/gateway/hr/goal/updateGoalProgress",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Goal/updateGoalProgress",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_HolidayCalendar_createUpdateHolidayCalendar",
+      "UpstreamPathTemplate": "/gateway/hr/holidaycalendar/createUpdateHolidayCalendar",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HolidayCalendar/createUpdateHolidayCalendar",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_HolidayCalendar_createUpdateHolidayDate",
+      "UpstreamPathTemplate": "/gateway/hr/holidaycalendar/createUpdateHolidayDate",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HolidayCalendar/createUpdateHolidayDate",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_HolidayCalendar_deleteHolidayCalendar",
+      "UpstreamPathTemplate": "/gateway/hr/holidaycalendar/deleteHolidayCalendar",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HolidayCalendar/deleteHolidayCalendar",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_HolidayCalendar_deleteHolidayDate",
+      "UpstreamPathTemplate": "/gateway/hr/holidaycalendar/deleteHolidayDate",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HolidayCalendar/deleteHolidayDate",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_HolidayCalendar_getAllHolidayCalendars",
+      "UpstreamPathTemplate": "/gateway/hr/holidaycalendar/getAllHolidayCalendars",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HolidayCalendar/getAllHolidayCalendars",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_HolidayCalendar_getAllHolidayCalendarsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/holidaycalendar/getAllHolidayCalendarsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HolidayCalendar/getAllHolidayCalendarsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_HolidayCalendar_getHolidayDatesByCalendar",
+      "UpstreamPathTemplate": "/gateway/hr/holidaycalendar/getHolidayDatesByCalendar",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/HolidayCalendar/getHolidayDatesByCalendar",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Interview_createUpdateInterview",
+      "UpstreamPathTemplate": "/gateway/hr/interview/createUpdateInterview",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Interview/createUpdateInterview",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Interview_getInterviewsByApplication",
+      "UpstreamPathTemplate": "/gateway/hr/interview/getInterviewsByApplication",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Interview/getInterviewsByApplication",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobGrade_createUpdateJobGrade",
+      "UpstreamPathTemplate": "/gateway/hr/jobgrade/createUpdateJobGrade",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobGrade/createUpdateJobGrade",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobGrade_deleteJobGrade",
+      "UpstreamPathTemplate": "/gateway/hr/jobgrade/deleteJobGrade",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobGrade/deleteJobGrade",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobGrade_getAllJobGrades",
+      "UpstreamPathTemplate": "/gateway/hr/jobgrade/getAllJobGrades",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobGrade/getAllJobGrades",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobGrade_getAllJobGradesPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/jobgrade/getAllJobGradesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobGrade/getAllJobGradesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobOffer_acceptOffer",
+      "UpstreamPathTemplate": "/gateway/hr/joboffer/acceptOffer",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobOffer/acceptOffer",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobOffer_createUpdateOffer",
+      "UpstreamPathTemplate": "/gateway/hr/joboffer/createUpdateOffer",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobOffer/createUpdateOffer",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobOffer_declineOffer",
+      "UpstreamPathTemplate": "/gateway/hr/joboffer/declineOffer",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobOffer/declineOffer",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobOffer_getOfferById",
+      "UpstreamPathTemplate": "/gateway/hr/joboffer/getOfferById",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobOffer/getOfferById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobOffer_issueOffer",
+      "UpstreamPathTemplate": "/gateway/hr/joboffer/issueOffer",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobOffer/issueOffer",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobPosting_closeJobPosting",
+      "UpstreamPathTemplate": "/gateway/hr/jobposting/closeJobPosting",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobPosting/closeJobPosting",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobPosting_createUpdateJobPosting",
+      "UpstreamPathTemplate": "/gateway/hr/jobposting/createUpdateJobPosting",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobPosting/createUpdateJobPosting",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobPosting_getAllJobPostingsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/jobposting/getAllJobPostingsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobPosting/getAllJobPostingsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobPosting_getApplicationsByPosting",
+      "UpstreamPathTemplate": "/gateway/hr/jobposting/getApplicationsByPosting",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobPosting/getApplicationsByPosting",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobPosting_getJobPostingById",
+      "UpstreamPathTemplate": "/gateway/hr/jobposting/getJobPostingById",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobPosting/getJobPostingById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_JobPosting_publishJobPosting",
+      "UpstreamPathTemplate": "/gateway/hr/jobposting/publishJobPosting",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/JobPosting/publishJobPosting",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeaveApplication_applyLeave",
+      "UpstreamPathTemplate": "/gateway/hr/leaveapplication/applyLeave",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeaveApplication/applyLeave",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeaveApplication_getAllLeaveApplicationsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/leaveapplication/getAllLeaveApplicationsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeaveApplication/getAllLeaveApplicationsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeaveApplication_getEmployeeLeaveBalances",
+      "UpstreamPathTemplate": "/gateway/hr/leaveapplication/getEmployeeLeaveBalances",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeaveApplication/getEmployeeLeaveBalances",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeaveApplication_setLeaveApplicationStatus",
+      "UpstreamPathTemplate": "/gateway/hr/leaveapplication/setLeaveApplicationStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeaveApplication/setLeaveApplicationStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeavePolicy_createUpdateLeavePolicy",
+      "UpstreamPathTemplate": "/gateway/hr/leavepolicy/createUpdateLeavePolicy",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeavePolicy/createUpdateLeavePolicy",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeavePolicy_deleteLeavePolicy",
+      "UpstreamPathTemplate": "/gateway/hr/leavepolicy/deleteLeavePolicy",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeavePolicy/deleteLeavePolicy",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeavePolicy_getAllLeavePoliciesPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/leavepolicy/getAllLeavePoliciesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeavePolicy/getAllLeavePoliciesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeavePolicy_grantLeaveEntitlements",
+      "UpstreamPathTemplate": "/gateway/hr/leavepolicy/grantLeaveEntitlements",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeavePolicy/grantLeaveEntitlements",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeaveType_createUpdateLeaveType",
+      "UpstreamPathTemplate": "/gateway/hr/leavetype/createUpdateLeaveType",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeaveType/createUpdateLeaveType",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeaveType_deleteLeaveType",
+      "UpstreamPathTemplate": "/gateway/hr/leavetype/deleteLeaveType",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeaveType/deleteLeaveType",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeaveType_getAllLeaveTypesPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/leavetype/getAllLeaveTypesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeaveType/getAllLeaveTypesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_LeaveType_getLeaveTypesLookup",
+      "UpstreamPathTemplate": "/gateway/hr/leavetype/getLeaveTypesLookup",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/LeaveType/getLeaveTypesLookup",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Loan_createUpdateLoan",
+      "UpstreamPathTemplate": "/gateway/hr/loan/createUpdateLoan",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Loan/createUpdateLoan",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Loan_getAllLoansPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/loan/getAllLoansPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Loan/getAllLoansPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Loan_setLoanStatus",
+      "UpstreamPathTemplate": "/gateway/hr/loan/setLoanStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Loan/setLoanStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Onboarding_addOnboardingTask",
+      "UpstreamPathTemplate": "/gateway/hr/onboarding/addOnboardingTask",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Onboarding/addOnboardingTask",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Onboarding_cancelOnboarding",
+      "UpstreamPathTemplate": "/gateway/hr/onboarding/cancelOnboarding",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Onboarding/cancelOnboarding",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Onboarding_completeOnboarding",
+      "UpstreamPathTemplate": "/gateway/hr/onboarding/completeOnboarding",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Onboarding/completeOnboarding",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Onboarding_getAcceptedOffersAwaitingOnboarding",
+      "UpstreamPathTemplate": "/gateway/hr/onboarding/getAcceptedOffersAwaitingOnboarding",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Onboarding/getAcceptedOffersAwaitingOnboarding",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Onboarding_getAllOnboardingsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/onboarding/getAllOnboardingsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Onboarding/getAllOnboardingsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Onboarding_getOnboardingTasks",
+      "UpstreamPathTemplate": "/gateway/hr/onboarding/getOnboardingTasks",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Onboarding/getOnboardingTasks",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Onboarding_startOnboarding",
+      "UpstreamPathTemplate": "/gateway/hr/onboarding/startOnboarding",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Onboarding/startOnboarding",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Onboarding_updateOnboardingTask",
+      "UpstreamPathTemplate": "/gateway/hr/onboarding/updateOnboardingTask",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Onboarding/updateOnboardingTask",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Overtime_createUpdateOvertime",
+      "UpstreamPathTemplate": "/gateway/hr/overtime/createUpdateOvertime",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Overtime/createUpdateOvertime",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Overtime_getAllOvertimePagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/overtime/getAllOvertimePagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Overtime/getAllOvertimePagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Overtime_setOvertimeStatus",
+      "UpstreamPathTemplate": "/gateway/hr/overtime/setOvertimeStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Overtime/setOvertimeStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_PayComponent_createUpdatePayComponent",
+      "UpstreamPathTemplate": "/gateway/hr/paycomponent/createUpdatePayComponent",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PayComponent/createUpdatePayComponent",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_PayComponent_deletePayComponent",
+      "UpstreamPathTemplate": "/gateway/hr/paycomponent/deletePayComponent",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PayComponent/deletePayComponent",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_PayComponent_getAllPayComponentsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/paycomponent/getAllPayComponentsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PayComponent/getAllPayComponentsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_PayComponent_getPayComponentsLookup",
+      "UpstreamPathTemplate": "/gateway/hr/paycomponent/getPayComponentsLookup",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PayComponent/getPayComponentsLookup",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_PayrollRun_getAllPayrollRunsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/payrollrun/getAllPayrollRunsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PayrollRun/getAllPayrollRunsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_PayrollRun_getPayslipDetail",
+      "UpstreamPathTemplate": "/gateway/hr/payrollrun/getPayslipDetail",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PayrollRun/getPayslipDetail",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_PayrollRun_getPayslipsByRun",
+      "UpstreamPathTemplate": "/gateway/hr/payrollrun/getPayslipsByRun",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PayrollRun/getPayslipsByRun",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_PayrollRun_processPayrollRun",
+      "UpstreamPathTemplate": "/gateway/hr/payrollrun/processPayrollRun",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PayrollRun/processPayrollRun",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_PayrollRun_setPayrollRunStatus",
+      "UpstreamPathTemplate": "/gateway/hr/payrollrun/setPayrollRunStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/PayrollRun/setPayrollRunStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Position_createUpdatePosition",
+      "UpstreamPathTemplate": "/gateway/hr/position/createUpdatePosition",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Position/createUpdatePosition",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Position_deletePosition",
+      "UpstreamPathTemplate": "/gateway/hr/position/deletePosition",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Position/deletePosition",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Position_getAllPositions",
+      "UpstreamPathTemplate": "/gateway/hr/position/getAllPositions",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Position/getAllPositions",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Position_getAllPositionsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/position/getAllPositionsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Position/getAllPositionsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Position_getPositionOrgTree",
+      "UpstreamPathTemplate": "/gateway/hr/position/getPositionOrgTree",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Position/getPositionOrgTree",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Position_setPositionFill",
+      "UpstreamPathTemplate": "/gateway/hr/position/setPositionFill",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Position/setPositionFill",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Position_setPositionStatus",
+      "UpstreamPathTemplate": "/gateway/hr/position/setPositionStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Position/setPositionStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Regularization_createUpdateRegularization",
+      "UpstreamPathTemplate": "/gateway/hr/regularization/createUpdateRegularization",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Regularization/createUpdateRegularization",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Regularization_getAllRegularizationsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/regularization/getAllRegularizationsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Regularization/getAllRegularizationsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Regularization_setRegularizationStatus",
+      "UpstreamPathTemplate": "/gateway/hr/regularization/setRegularizationStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Regularization/setRegularizationStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Requisition_approveRequisition",
+      "UpstreamPathTemplate": "/gateway/hr/requisition/approveRequisition",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Requisition/approveRequisition",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Requisition_createUpdateRequisition",
+      "UpstreamPathTemplate": "/gateway/hr/requisition/createUpdateRequisition",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Requisition/createUpdateRequisition",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Requisition_getAllRequisitionsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/requisition/getAllRequisitionsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Requisition/getAllRequisitionsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Requisition_getRequisitionById",
+      "UpstreamPathTemplate": "/gateway/hr/requisition/getRequisitionById",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Requisition/getRequisitionById",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Requisition_rejectRequisition",
+      "UpstreamPathTemplate": "/gateway/hr/requisition/rejectRequisition",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Requisition/rejectRequisition",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Requisition_submitRequisition",
+      "UpstreamPathTemplate": "/gateway/hr/requisition/submitRequisition",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Requisition/submitRequisition",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Review_getAllReviewsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/review/getAllReviewsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Review/getAllReviewsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Review_getReviewDetail",
+      "UpstreamPathTemplate": "/gateway/hr/review/getReviewDetail",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Review/getReviewDetail",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Review_saveReviewRatings",
+      "UpstreamPathTemplate": "/gateway/hr/review/saveReviewRatings",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Review/saveReviewRatings",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Review_setReviewStatus",
+      "UpstreamPathTemplate": "/gateway/hr/review/setReviewStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Review/setReviewStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Roster_createUpdateRoster",
+      "UpstreamPathTemplate": "/gateway/hr/roster/createUpdateRoster",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Roster/createUpdateRoster",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Roster_deleteRoster",
+      "UpstreamPathTemplate": "/gateway/hr/roster/deleteRoster",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Roster/deleteRoster",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Roster_getEmployeeRoster",
+      "UpstreamPathTemplate": "/gateway/hr/roster/getEmployeeRoster",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Roster/getEmployeeRoster",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_SalaryStructure_createUpdateSalaryStructure",
+      "UpstreamPathTemplate": "/gateway/hr/salarystructure/createUpdateSalaryStructure",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SalaryStructure/createUpdateSalaryStructure",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_SalaryStructure_deleteSalaryStructure",
+      "UpstreamPathTemplate": "/gateway/hr/salarystructure/deleteSalaryStructure",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SalaryStructure/deleteSalaryStructure",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_SalaryStructure_getAllSalaryStructuresPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/salarystructure/getAllSalaryStructuresPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SalaryStructure/getAllSalaryStructuresPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_SalaryStructure_getSalaryStructureDetail",
+      "UpstreamPathTemplate": "/gateway/hr/salarystructure/getSalaryStructureDetail",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/SalaryStructure/getSalaryStructureDetail",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Separation_approveSeparation",
+      "UpstreamPathTemplate": "/gateway/hr/separation/approveSeparation",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Separation/approveSeparation",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Separation_createUpdateExitInterview",
+      "UpstreamPathTemplate": "/gateway/hr/separation/createUpdateExitInterview",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Separation/createUpdateExitInterview",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Separation_createUpdateSeparation",
+      "UpstreamPathTemplate": "/gateway/hr/separation/createUpdateSeparation",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Separation/createUpdateSeparation",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Separation_deleteSeparation",
+      "UpstreamPathTemplate": "/gateway/hr/separation/deleteSeparation",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Separation/deleteSeparation",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Separation_getAllSeparationsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/separation/getAllSeparationsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Separation/getAllSeparationsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Separation_getSeparationDetail",
+      "UpstreamPathTemplate": "/gateway/hr/separation/getSeparationDetail",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Separation/getSeparationDetail",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Separation_setClearanceStatus",
+      "UpstreamPathTemplate": "/gateway/hr/separation/setClearanceStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Separation/setClearanceStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Separation_setSeparationStatus",
+      "UpstreamPathTemplate": "/gateway/hr/separation/setSeparationStatus",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Separation/setSeparationStatus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Separation_settleSeparation",
+      "UpstreamPathTemplate": "/gateway/hr/separation/settleSeparation",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Separation/settleSeparation",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Shift_createUpdateShift",
+      "UpstreamPathTemplate": "/gateway/hr/shift/createUpdateShift",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Shift/createUpdateShift",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Shift_deleteShift",
+      "UpstreamPathTemplate": "/gateway/hr/shift/deleteShift",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Shift/deleteShift",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Shift_getAllShiftsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/shift/getAllShiftsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Shift/getAllShiftsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_Employee_getAllEmployees",
+      "UpstreamPathTemplate": "/gateway/hr/employee/getAllEmployees",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/Employee/getAllEmployees",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_BiometricRegistration_registerMobileBiometric",
+      "UpstreamPathTemplate": "/gateway/hr/biometricregistration/registerMobileBiometric",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/BiometricRegistration/registerMobileBiometric",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_BiometricRegistration_verifyBiometricRegistration",
+      "UpstreamPathTemplate": "/gateway/hr/biometricregistration/verifyBiometricRegistration",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/BiometricRegistration/verifyBiometricRegistration",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_BiometricRegistration_getMyBiometricRegistration",
+      "UpstreamPathTemplate": "/gateway/hr/biometricregistration/getMyBiometricRegistration",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/BiometricRegistration/getMyBiometricRegistration",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_BiometricRegistration_getAllBiometricRegistrationsPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/biometricregistration/getAllBiometricRegistrationsPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/BiometricRegistration/getAllBiometricRegistrationsPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_BiometricRegistration_createTerminalEnrollment",
+      "UpstreamPathTemplate": "/gateway/hr/biometricregistration/createTerminalEnrollment",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/BiometricRegistration/createTerminalEnrollment",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_BiometricRegistration_revokeBiometricRegistration",
+      "UpstreamPathTemplate": "/gateway/hr/biometricregistration/revokeBiometricRegistration",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/BiometricRegistration/revokeBiometricRegistration",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendancePunch_getAllAttendancePunchesPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/attendancepunch/getAllAttendancePunchesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendancePunch/getAllAttendancePunchesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendancePunch_reprocessAttendance",
+      "UpstreamPathTemplate": "/gateway/hr/attendancepunch/reprocessAttendance",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendancePunch/reprocessAttendance",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendanceDevice_getAllAttendanceDevicesPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/attendancedevice/getAllAttendanceDevicesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendanceDevice/getAllAttendanceDevicesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendanceDevice_createUpdateAttendanceDevice",
+      "UpstreamPathTemplate": "/gateway/hr/attendancedevice/createUpdateAttendanceDevice",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendanceDevice/createUpdateAttendanceDevice",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendanceDevice_deleteAttendanceDevice",
+      "UpstreamPathTemplate": "/gateway/hr/attendancedevice/deleteAttendanceDevice",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendanceDevice/deleteAttendanceDevice",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendanceZone_getAllAttendanceZonesPagingWithSearch",
+      "UpstreamPathTemplate": "/gateway/hr/attendancezone/getAllAttendanceZonesPagingWithSearch",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendanceZone/getAllAttendanceZonesPagingWithSearch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendanceZone_createUpdateAttendanceZone",
+      "UpstreamPathTemplate": "/gateway/hr/attendancezone/createUpdateAttendanceZone",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendanceZone/createUpdateAttendanceZone",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendanceZone_deleteAttendanceZone",
+      "UpstreamPathTemplate": "/gateway/hr/attendancezone/deleteAttendanceZone",
+      "UpstreamHttpMethod": [
+        "DELETE"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendanceZone/deleteAttendanceZone",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
+    },
+    {
+      "Key": "HR_AttendancePunch_getBiometricChallenge",
+      "UpstreamPathTemplate": "/gateway/hr/attendancepunch/getBiometricChallenge",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendancePunch/getBiometricChallenge",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
+    },
+    {
+      "Key": "HR_AttendancePunch_mobilePunch",
+      "UpstreamPathTemplate": "/gateway/hr/attendancepunch/mobilePunch",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendancePunch/mobilePunch",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
+    },
+    {
+      "Key": "HR_AttendancePunch_devicePunches",
+      "UpstreamPathTemplate": "/gateway/hr/attendancepunch/devicePunches",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/api/v1/AttendancePunch/devicePunches",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
+    },
+    {
+      "Key": "HR_IClock_cdata",
+      "UpstreamPathTemplate": "/iclock/cdata",
+      "UpstreamHttpMethod": [
+        "GET",
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/iclock/cdata",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
+    },
+    {
+      "Key": "HR_IClock_getrequest",
+      "UpstreamPathTemplate": "/iclock/getrequest",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "DownstreamPathTemplate": "/iclock/getrequest",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
+    },
+    {
+      "Key": "HR_IClock_devicecmd",
+      "UpstreamPathTemplate": "/iclock/devicecmd",
+      "UpstreamHttpMethod": [
+        "POST"
+      ],
+      "DownstreamPathTemplate": "/iclock/devicecmd",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44358
+        }
+      ],
+      "UpstreamHeaderTransform": {
+        "X-Forwarded-For": "{RemoteIpAddress}"
+      }
     }
   ],
   "GlobalConfiguration": {

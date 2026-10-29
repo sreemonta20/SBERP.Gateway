@@ -3,21 +3,25 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using SBERP.Shared.Extensions;
 using Serilog;
+using System.Net;
 using System.Text;
+using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Load ocelot.json into configuration pipeline
+// 1. Configuration
+// CreateBuilder already loads appsettings.json, appsettings.{Environment}.json, environment variables
+// and command-line arguments. Only the Ocelot route files are added here; environment variables and
+// command-line arguments are added again after them so they keep the highest priority (a source
+// added later wins) — re-adding appsettings.json here would make the file override them.
 builder.Configuration
-    .SetBasePath(Directory.GetCurrentDirectory())
-    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-    .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json",
+    .AddJsonFile(Path.Combine(builder.Environment.ContentRootPath, "ocelot.json"), optional: false, reloadOnChange: true)
+    .AddJsonFile(Path.Combine(builder.Environment.ContentRootPath, $"ocelot.{builder.Environment.EnvironmentName}.json"),
                  optional: true, reloadOnChange: true)
-    .AddJsonFile("ocelot.json", optional: false, reloadOnChange: true)
-    .AddJsonFile($"ocelot.{builder.Environment.EnvironmentName}.json",
-                 optional: true, reloadOnChange: true)
-    .AddEnvironmentVariables();
+    .AddEnvironmentVariables()
+    .AddCommandLine(args);
 
 // 1.1 Azure Key Vault — added LAST so its secrets override appsettings.json.
 //     Mirrors the SBERP.Security / SBERP.HumanResources setup. The provider maps
@@ -102,6 +106,44 @@ builder.Services
 
 builder.Services.AddAuthorization();
 
+// 4.1 Token blacklist — rejects logged-out tokens and tokens of users whose sessions were ended
+//     (password / role change, deactivation) here already, before anything is forwarded.
+//     Same Redis keys as the microservices (SBERP.Shared SharedAuthCache).
+builder.Services.AddSharedTokenBlacklist();
+
+// 4.2 Rate limits on the anonymous endpoints, per client IP: slows password guessing, token brute
+//     force and flooding of the attendance endpoints. Every other route is unlimited here.
+int loginPerMinute = builder.Configuration.GetValue("AuthRateLimits:LoginPerMinute", 10);
+int refreshPerMinute = builder.Configuration.GetValue("AuthRateLimits:RefreshPerMinute", 30);
+// anonymous attendance endpoints: phones (challenge + punch) and door terminals
+int mobilePunchPerMinute = builder.Configuration.GetValue("AuthRateLimits:MobilePunchPerMinute", 30);
+int devicePushPerMinute = builder.Configuration.GetValue("AuthRateLimits:DevicePushPerMinute", 240);
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = (int)HttpStatusCode.TooManyRequests;
+    options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(ctx =>
+    {
+        string path = ctx.Request.Path.Value?.ToLowerInvariant() ?? string.Empty;
+        string ip = ctx.Connection.RemoteIpAddress?.ToString() ?? "unknown";
+        int? limit = path switch
+        {
+            "/gateway/auth/authenticateuser" => loginPerMinute,
+            "/gateway/auth/refreshtoken" or "/gateway/auth/revoke" => refreshPerMinute,
+            "/gateway/hr/attendancepunch/getbiometricchallenge" or "/gateway/hr/attendancepunch/mobilepunch" => mobilePunchPerMinute,
+            "/gateway/hr/attendancepunch/devicepunches" or "/iclock/cdata" or "/iclock/getrequest" or "/iclock/devicecmd" => devicePushPerMinute,
+            _ => null
+        };
+        return limit == null
+            ? RateLimitPartition.GetNoLimiter("unlimited")
+            : RateLimitPartition.GetFixedWindowLimiter($"{path}|{ip}", _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = limit.Value,
+                Window = TimeSpan.FromMinutes(1),
+                QueueLimit = 0
+            });
+    });
+});
+
 // 5. Ocelot
 builder.Services.AddOcelot(builder.Configuration);
 
@@ -112,7 +154,9 @@ app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("GatewayCorsPolicy");
+app.UseRateLimiter();
 app.UseAuthentication();
+app.UseTokenBlacklist();
 app.UseAuthorization();
 
 // Ocelot handles all routing — replaces app.MapControllers()

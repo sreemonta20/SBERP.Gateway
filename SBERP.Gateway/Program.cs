@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.WebHost.ConfigureKestrel(o => o.AddServerHeader = false);
 
 // 1. Configuration
 // CreateBuilder already loads appsettings.json, appsettings.{Environment}.json, environment variables
@@ -48,14 +49,16 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 Log.Information("SBERP.Gateway starting...");
 
-// 3. CORS — allow Angular on port 4200
+// 3. CORS: browser origins allowed to call the API (AllowedOrigins). The app sends a bearer token,
+//    not cookies, so credentials are not allowed.
+string[] allowedOrigins = builder.Configuration.GetSection("AllowedOrigins").Get<string[]>()
+    ?? ["https://localhost:4200", "http://localhost:4200"];
 builder.Services.AddCors(options =>
     options.AddPolicy("GatewayCorsPolicy", policy =>
         policy
-            .WithOrigins("https://localhost:4200", "http://localhost:4200")
+            .WithOrigins(allowedOrigins)
             .AllowAnyHeader()
             .AllowAnyMethod()
-            .AllowCredentials()
             .WithExposedHeaders("Token-Expired",
                                 "X-RateLimit-Limit",
                                 "X-RateLimit-Remaining",
@@ -89,7 +92,7 @@ builder.Services
             ValidIssuer = jwtIssuer,
             ValidAudience = jwtAudience,
             IssuerSigningKey =
-                new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtKey)),
+                new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
             ClockSkew = TimeSpan.Zero
         };
         options.Events = new JwtBearerEvents
@@ -123,7 +126,8 @@ builder.Services.AddRateLimiter(options =>
     options.RejectionStatusCode = (int)HttpStatusCode.TooManyRequests;
     options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(ctx =>
     {
-        string path = ctx.Request.Path.Value?.ToLowerInvariant() ?? string.Empty;
+        // a trailing slash reaches the same route, so it must not reach a different limit
+        string path = ctx.Request.Path.Value?.TrimEnd('/').ToLowerInvariant() ?? string.Empty;
         string ip = ctx.Connection.RemoteIpAddress?.ToString() ?? "unknown";
         int? limit = path switch
         {
@@ -154,6 +158,7 @@ app.UseSerilogRequestLogging();
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("GatewayCorsPolicy");
+app.UseSecurityHeaders();
 app.UseRateLimiter();
 app.UseAuthentication();
 app.UseTokenBlacklist();
